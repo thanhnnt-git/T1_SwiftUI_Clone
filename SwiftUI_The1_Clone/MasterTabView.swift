@@ -37,7 +37,7 @@ struct MasterTabView: View {
                         testData[3].image
                         Text(testData[3].name)
                     }
-                NavigationView {
+                NavigationStack {
                     AccountView()
                         .navigationTitle("Account")
                 }

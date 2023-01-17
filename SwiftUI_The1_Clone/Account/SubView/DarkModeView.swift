@@ -25,6 +25,7 @@ struct DarkModeView: View {
             .listRowSeparator(.hidden)
             
         }
+        .toolbar(.hidden, for: .tabBar)
        
     }
        

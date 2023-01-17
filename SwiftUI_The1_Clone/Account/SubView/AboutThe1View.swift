@@ -9,11 +9,19 @@ import SwiftUI
 
 struct AboutThe1View: View {
     var body: some View {
-        ScrollView {
-            AboutThe1Text()
-            TypeOfMembership()
-            WhatYouCanDoWithThe1View()
+        ScrollView() {
+            VStack {
+                
+                    AboutThe1Text()
+                CentralHistoryView()
+                    TypeOfMembership()
+                    WhatYouCanDoWithThe1View()
+                    CentralGroupView()
+                    CentralGroupFooterView()
+            }
+            .toolbar(.hidden, for: .tabBar)
         }
+        
     }
 }
 

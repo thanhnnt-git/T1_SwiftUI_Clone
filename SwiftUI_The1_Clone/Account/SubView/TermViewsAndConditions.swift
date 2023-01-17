@@ -15,6 +15,7 @@ struct TermViewsAndConditions: View {
     
     var body: some View {
         HTMLView(htmlString: htmlString)
+            .toolbar(.hidden, for: .tabBar)
     }
 }
 

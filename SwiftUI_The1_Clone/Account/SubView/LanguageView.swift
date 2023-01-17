@@ -14,6 +14,7 @@ struct LanguageView: View {
             LanguageListRow(text: "Vietnamese", image: "On")
             Spacer()
         }
+        .toolbar(.hidden, for: .tabBar)
         
     }
 }

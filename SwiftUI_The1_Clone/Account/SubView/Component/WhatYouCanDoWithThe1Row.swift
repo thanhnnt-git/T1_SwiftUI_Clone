@@ -21,6 +21,7 @@ struct WhatYouCanDoWithThe1Row: View {
             VStack(alignment: .leading) {
                 Text(text)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 6, trailing: 0))
+                    .bold()
                 Text(subText)
                     .foregroundColor(Color(red: 0.6, green: 0.6, blue: 0.6))
                 Divider().padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))

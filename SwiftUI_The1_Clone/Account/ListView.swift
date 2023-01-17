@@ -19,12 +19,15 @@ struct ListView: View {
                         ForEach(sectionItem.items) {
                             accountItem in
                             NavigationLink(destination: chooseDestination( accountItem.itemName)) {
+                                
+                                
                                 Label {
                                     Text(accountItem.itemName)
                                 } icon: {
                                     Image( accountItem.itemImage).foregroundColor(.black)
                                         .frame(width: 28.0, height: 28.0)
                                 }
+                                
                                 
                             }
                         }
@@ -51,6 +54,7 @@ struct ListView: View {
         case "About The 1": AboutThe1View()
         default: EmptyView()
         }
+            
     }
 }
 

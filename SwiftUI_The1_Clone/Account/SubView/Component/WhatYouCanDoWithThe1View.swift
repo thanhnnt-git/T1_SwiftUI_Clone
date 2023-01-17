@@ -18,8 +18,8 @@ struct WhatYouCanDoWithThe1View: View {
                     .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.09))
                 Spacer()
             } .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
-            WhatYouCanDoWithThe1Row(image: "menu-my-rewards", text: "Redeem Rewards", subText: "Points redeem Lorem Ipsum is simply dummy text of central group and partnerships.")
-            WhatYouCanDoWithThe1Row(image: "Privileges", text: "Access Privileges", subText: "Points redeem Lorem Ipsum is simply dummy text of central group and partnerships.")
+            WhatYouCanDoWithThe1Row(image: "Rewards", text: "Redeem Rewards", subText: "Points redeem Lorem Ipsum is simply dummy text of central group and partnerships.")
+            WhatYouCanDoWithThe1Row(image: "Privileges", text: "Access Privileges", subText: "Rewards redeemed")
             WhatYouCanDoWithThe1Row_NonDivider(image: "The 1 Transfer", text: "Transfer Points", subText: "Points easily transferred, no expiration..")
             
         }
