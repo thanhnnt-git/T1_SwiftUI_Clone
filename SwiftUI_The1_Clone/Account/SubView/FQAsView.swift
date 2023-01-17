@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FQAsView: View {
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         ScrollView {
             VStack (alignment: .leading){
@@ -26,13 +27,30 @@ struct FQAsView: View {
                     }
                     Spacer()
                 }
+                
             }
             
-            
-            .toolbar(.hidden, for: .tabBar)
-            
         }
-        //            .navigationBarTitle("FQAs")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack (){
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.black)
+                    }
+                    Spacer()
+                    Text("FAQ")
+                        .bold()
+                    Spacer()
+                }
+                
+            }
+        }
+        .toolbar(.hidden, for: .tabBar)
     }
 }
 

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContactUsView: View {
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         VStack(alignment: .leading) {
             Text("Welcome to Lorem Ipsum is simply dummy text")
@@ -32,7 +33,28 @@ struct ContactUsView: View {
             
         }
         .padding()
+       
         .toolbar(.hidden, for: .tabBar)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack (){
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.black)
+                    }
+                    Spacer()
+                    Text("Contact Us")
+                        .bold()
+                        .fixedSize()
+                    Spacer()
+                }
+                
+            }
+        }
     }
 }
 

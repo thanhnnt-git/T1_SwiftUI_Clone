@@ -14,7 +14,7 @@ struct FAQsRow: View {
         ZStack {
             RoundedRectangle(cornerRadius: 5)
                 .fill(Color(red: 229/255, green: 229/255, blue: 229/255))
-                .frame(height: 48)
+                .frame(height: 53.33)
                 .padding([.leading, .trailing], 16)
                 HStack() {
                     Text(text).lineLimit(1)

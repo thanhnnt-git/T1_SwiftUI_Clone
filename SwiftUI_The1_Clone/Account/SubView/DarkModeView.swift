@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DarkModeView: View {
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         List {
             HStack(spacing: 290) {
@@ -25,7 +26,28 @@ struct DarkModeView: View {
             .listRowSeparator(.hidden)
             
         }
+        
         .toolbar(.hidden, for: .tabBar)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack (){
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.black)
+                    }
+                    Spacer()
+                    Text("Dark Mode")
+                        .bold()
+                        .fixedSize()
+                    Spacer()
+                }
+                
+            }
+        }
        
     }
        

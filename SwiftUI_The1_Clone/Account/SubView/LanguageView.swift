@@ -8,15 +8,38 @@
 import SwiftUI
 
 struct LanguageView: View {
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         VStack(spacing: 10){
             LanguageListRow(text: "English", image: "OffLight")
             LanguageListRow(text: "Vietnamese", image: "On")
             Spacer()
         }
+        
         .toolbar(.hidden, for: .tabBar)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack (){
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.black)
+                    }
+                    Spacer()
+                    Text("Language")
+                        .bold()
+                        .fixedSize()
+                    Spacer()
+                }
+                
+            }
+        }
         
     }
+    
 }
 
 struct LanguageView_Previews: PreviewProvider {

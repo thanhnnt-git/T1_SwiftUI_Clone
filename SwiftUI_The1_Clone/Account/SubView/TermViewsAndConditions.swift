@@ -12,10 +12,31 @@ struct TermViewsAndConditions: View {
     
     
     
-    
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         HTMLView(htmlString: htmlString)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack (){
+                        Button {
+                            dismiss()
+                        } label: {
+                            Image(systemName: "chevron.backward")
+                                .foregroundColor(.black)
+                        }
+                        Spacer()
+                        Text("Terms & Conditions")
+                            .bold()
+                            .fixedSize()
+                        Spacer()
+                    }
+                    
+                }
+            }
             .toolbar(.hidden, for: .tabBar)
+            .padding()
     }
 }
 
