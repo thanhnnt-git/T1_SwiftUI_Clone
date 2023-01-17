@@ -34,6 +34,9 @@
 		05B70FF629765E7600380F37 /* CentralHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B70FF529765E7600380F37 /* CentralHistoryView.swift */; };
 		05B70FFA2976673800380F37 /* CircleIndicatorView_NonLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B70FF92976673800380F37 /* CircleIndicatorView_NonLine.swift */; };
 		05B70FFC297667BD00380F37 /* CircleIndicatorRow_NonLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B70FFB297667BD00380F37 /* CircleIndicatorRow_NonLine.swift */; };
+		05B70FFE2976786300380F37 /* FAQsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B70FFD2976786300380F37 /* FAQsRow.swift */; };
+		05B710002976791C00380F37 /* FAQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B70FFF2976791C00380F37 /* FAQs.swift */; };
+		05B7100429767B5300380F37 /* FQAsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7100329767B5300380F37 /* FQAsView.swift */; };
 		05E658D4297534D1005B8E3E /* TermViewsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E658D3297534D1005B8E3E /* TermViewsAndConditions.swift */; };
 		05E658D629754737005B8E3E /* TypeOfMembership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E658D529754737005B8E3E /* TypeOfMembership.swift */; };
 		05E658D829754DE3005B8E3E /* WhatYouCanDoWithThe1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E658D729754DE3005B8E3E /* WhatYouCanDoWithThe1View.swift */; };
@@ -70,6 +73,9 @@
 		05B70FF529765E7600380F37 /* CentralHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralHistoryView.swift; sourceTree = "<group>"; };
 		05B70FF92976673800380F37 /* CircleIndicatorView_NonLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleIndicatorView_NonLine.swift; sourceTree = "<group>"; };
 		05B70FFB297667BD00380F37 /* CircleIndicatorRow_NonLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleIndicatorRow_NonLine.swift; sourceTree = "<group>"; };
+		05B70FFD2976786300380F37 /* FAQsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQsRow.swift; sourceTree = "<group>"; };
+		05B70FFF2976791C00380F37 /* FAQs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQs.swift; sourceTree = "<group>"; };
+		05B7100329767B5300380F37 /* FQAsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FQAsView.swift; sourceTree = "<group>"; };
 		05E658D3297534D1005B8E3E /* TermViewsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermViewsAndConditions.swift; sourceTree = "<group>"; };
 		05E658D529754737005B8E3E /* TypeOfMembership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfMembership.swift; sourceTree = "<group>"; };
 		05E658D729754DE3005B8E3E /* WhatYouCanDoWithThe1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatYouCanDoWithThe1View.swift; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 				05B70FF529765E7600380F37 /* CentralHistoryView.swift */,
 				05B70FF92976673800380F37 /* CircleIndicatorView_NonLine.swift */,
 				05B70FFB297667BD00380F37 /* CircleIndicatorRow_NonLine.swift */,
+				05B70FFD2976786300380F37 /* FAQsRow.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -165,6 +172,7 @@
 				055CA2AC2967FB970075F0F3 /* TabBarItem.swift */,
 				055B4ADD296D22530018BFD6 /* GridImage.swift */,
 				0588E584296BF19D00F665D7 /* SettingCell.swift */,
+				05B70FFF2976791C00380F37 /* FAQs.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 				05564BF02974F2DC00E3406A /* PrivacyPolicyView.swift */,
 				05564BF2297504CA00E3406A /* AboutThe1View.swift */,
 				05E658D3297534D1005B8E3E /* TermViewsAndConditions.swift */,
+				05B7100329767B5300380F37 /* FQAsView.swift */,
 				0515EBEC29713B610084E133 /* Component */,
 			);
 			path = SubView;
@@ -262,12 +271,14 @@
 				05B70FFC297667BD00380F37 /* CircleIndicatorRow_NonLine.swift in Sources */,
 				0588E585296BF19D00F665D7 /* SettingCell.swift in Sources */,
 				05E658D829754DE3005B8E3E /* WhatYouCanDoWithThe1View.swift in Sources */,
+				05B70FFE2976786300380F37 /* FAQsRow.swift in Sources */,
 				0520F9E02967E1A3009A936B /* MasterTabView.swift in Sources */,
 				055B4ADE296D22530018BFD6 /* GridImage.swift in Sources */,
 				05E658D4297534D1005B8E3E /* TermViewsAndConditions.swift in Sources */,
 				05E658D629754737005B8E3E /* TypeOfMembership.swift in Sources */,
 				05B70FEE29763B8D00380F37 /* CentralGroupView.swift in Sources */,
 				055B4AE2296D5B930018BFD6 /* TestView.swift in Sources */,
+				05B710002976791C00380F37 /* FAQs.swift in Sources */,
 				05E658DC297554CF005B8E3E /* WhatYouCanDoWithThe1Row_NonDivider.swift in Sources */,
 				05564BF3297504CA00E3406A /* AboutThe1View.swift in Sources */,
 				05E658DA29754E66005B8E3E /* WhatYouCanDoWithThe1Row.swift in Sources */,
@@ -276,6 +287,7 @@
 				05B70FFA2976673800380F37 /* CircleIndicatorView_NonLine.swift in Sources */,
 				0515EBEB29712CC80084E133 /* LanguageListRow.swift in Sources */,
 				0565CE9429710FF3007D67A0 /* LanguageView.swift in Sources */,
+				05B7100429767B5300380F37 /* FQAsView.swift in Sources */,
 				05564BF12974F2DC00E3406A /* PrivacyPolicyView.swift in Sources */,
 				0588E587296BF50900F665D7 /* AccountView.swift in Sources */,
 				0515EBEE29713B750084E133 /* DarkModeView.swift in Sources */,

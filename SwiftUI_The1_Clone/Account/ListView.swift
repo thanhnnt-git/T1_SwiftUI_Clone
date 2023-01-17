@@ -49,6 +49,7 @@ struct ListView: View {
         case "Language": LanguageView()
         case "Dark Mode": DarkModeView()
         case "Contact Us": ContactUsView()
+        case "FAQs": FQAsView()
         case "Privacy Policy": PrivacyPolicyView()
         case "Terms & Conditions": TermViewsAndConditions()
         case "About The 1": AboutThe1View()
