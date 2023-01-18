@@ -9,12 +9,13 @@ import SwiftUI
 
 struct LanguageListRow: View {
 //    var listLanguage = ["English", "Vietnamese"]
+    @Environment(\.colorScheme) var colorScheme
     var text: String
     var image: String
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 5)
-                .fill(Color(red: 229/255, green: 229/255, blue: 229/255))
+                .fill(colorScheme == .dark ? Color(red: 37/255, green: 37/255, blue: 37/255) :Color(red: 229/255, green: 229/255, blue: 229/255))
                 .frame(height: 48)
                 .padding([.leading, .trailing], 16)
             HStack() {

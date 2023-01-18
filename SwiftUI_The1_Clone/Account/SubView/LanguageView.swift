@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LanguageView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         VStack(spacing: 10){
             LanguageListRow(text: "English", image: "OffLight")
@@ -26,7 +27,7 @@ struct LanguageView: View {
                         dismiss()
                     } label: {
                         Image(systemName: "chevron.backward")
-                            .foregroundColor(.black)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                     Spacer()
                     Text("Language")
