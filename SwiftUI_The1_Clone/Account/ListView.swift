@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ListView: View {
-    @State var i = 0
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         List {
             ForEach(testAccountData) {
                 sectionItem in
                 Section(header: Text(sectionItem.sectionName).bold()
-                    .foregroundColor(.black)
+                    .foregroundColor(colorScheme == .dark ? .white : .black)
                     .textCase(.none)) {
                         ForEach(sectionItem.items) {
                             accountItem in
@@ -36,7 +36,7 @@ struct ListView: View {
                     }
                 
             }
-            .listRowBackground(Color(red: 229/255, green: 229/255, blue: 229/255).ignoresSafeArea())
+            .listRowBackground(colorScheme == .dark ? Color(red: 37/255, green: 37/255, blue: 37/255) :Color(red: 229/255, green: 229/255, blue: 229/255))
             .listRowSeparator(.hidden)
         } // List
         

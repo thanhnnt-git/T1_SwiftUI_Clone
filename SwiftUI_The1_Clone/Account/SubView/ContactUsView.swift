@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContactUsView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         VStack(alignment: .leading) {
             Text("Welcome to Lorem Ipsum is simply dummy text")
@@ -18,7 +19,7 @@ struct ContactUsView: View {
                 .foregroundColor(.gray)
             ZStack {
                 RoundedRectangle(cornerRadius: 5)
-                    .fill(Color(red: 229/255, green: 229/255, blue: 229/255))
+                    .fill(colorScheme == .dark ? Color(red: 37/255, green: 37/255, blue: 37/255) :Color(red: 229/255, green: 229/255, blue: 229/255))
                     .frame(height: 48)
                 
                 HStack() {
@@ -44,7 +45,7 @@ struct ContactUsView: View {
                         dismiss()
                     } label: {
                         Image(systemName: "chevron.backward")
-                            .foregroundColor(.black)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                     Spacer()
                     Text("Contact Us")

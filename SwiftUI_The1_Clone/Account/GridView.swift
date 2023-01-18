@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct GridView: View {
-    
+    @Environment(\.colorScheme) var colorScheme
     var columnGrid: [GridItem] = [GridItem(.flexible()),GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()) ]
     
     var body: some View {
         ZStack {
-            Color(red: 242/255, green: 242/255, blue: 247/255).ignoresSafeArea()
+            Rectangle()
+                .foregroundColor(colorScheme == .dark ? Color.black : Color(red: 242/255, green: 242/255, blue: 247/255))
+                .ignoresSafeArea()
+            
             LazyVGrid(columns: columnGrid, spacing: 5) {
                     ForEach(testGridImages.imagesName) { image in
                         Image(image.imageName)

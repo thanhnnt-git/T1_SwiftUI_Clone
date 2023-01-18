@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DarkModeView: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) private var dismiss
     var body: some View {
         List {
@@ -15,14 +16,14 @@ struct DarkModeView: View {
                 Text("On")
                 Image("OffLight")
             }
-            .listRowBackground(Color(red: 229/255, green: 229/255, blue: 229/255).ignoresSafeArea())
+            .listRowBackground(colorScheme == .dark ? Color(red: 37/255, green: 37/255, blue: 37/255) : Color(red: 229/255, green: 229/255, blue: 229/255))
             .listRowSeparator(.hidden)
             
             HStack(spacing: 290) {
                 Text("Off")
                 Image("On")
             }
-            .listRowBackground(Color(red: 229/255, green: 229/255, blue: 229/255).ignoresSafeArea())
+            .listRowBackground(colorScheme == .dark ? Color(red: 37/255, green: 37/255, blue: 37/255) : Color(red: 229/255, green: 229/255, blue: 229/255))
             .listRowSeparator(.hidden)
             
         }
@@ -37,7 +38,7 @@ struct DarkModeView: View {
                         dismiss()
                     } label: {
                         Image(systemName: "chevron.backward")
-                            .foregroundColor(.black)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                     Spacer()
                     Text("Dark Mode")
