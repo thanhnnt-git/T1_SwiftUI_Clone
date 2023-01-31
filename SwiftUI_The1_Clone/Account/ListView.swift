@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     @Environment(\.colorScheme) var colorScheme
+    @ObservedObject var languageManager = LanguageManager()
     var body: some View {
         List {
             ForEach(testAccountData) {
@@ -36,7 +37,9 @@ struct ListView: View {
             }
             .listRowBackground(colorScheme == .dark ? Color(red: 37/255, green: 37/255, blue: 37/255) :Color(red: 229/255, green: 229/255, blue: 229/255))
             .listRowSeparator(.hidden)
-        } // List
+        }
+        // List
+        .environment(\.locale, .init(identifier: languageManager.identifer))
         
         
     }

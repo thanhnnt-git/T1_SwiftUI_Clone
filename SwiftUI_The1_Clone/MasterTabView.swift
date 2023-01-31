@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MasterTabView: View {
     let list: [TabBarItem]
-    
+    @StateObject var languageManager = LanguageManager()
     var body: some View {
         
         
@@ -45,7 +45,8 @@ struct MasterTabView: View {
                     testData[4].image
                     Text(testData[4].name)
                 }
-                    
+                
+                .environment(\.locale, .init(identifier: languageManager.identifer))
             }
         }
         
@@ -58,6 +59,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
      
             MasterTabView(list: testData)
+            
         
         
         

@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct LanguageListRow: View {
-//    var listLanguage = ["English", "Vietnamese"]
+    //    var listLanguage = ["English", "Vietnamese"]
     @Environment(\.colorScheme) var colorScheme
+    @StateObject var languageManager = LanguageManager()
     var text: String
     var image: String
+    //    @EnvironmentObject var languageManager: LanguageManager()
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 5)
@@ -22,15 +24,19 @@ struct LanguageListRow: View {
                 Text(text)
                 Spacer()
                 Image(image)
-            }.padding(EdgeInsets(top: 0, leading: 32, bottom: 0, trailing: 32))
-            
+            }
+            .padding(EdgeInsets(top: 0, leading: 32, bottom: 0, trailing: 32))
             
         }
+        
     }
+    
 }
 
 struct LanguageListRow_Previews: PreviewProvider {
     static var previews: some View {
         LanguageListRow(text: "Vietnamese", image: "On")
+        //            .environment(\.locale, .init(identifier: languageManager.identifer))
+        
     }
 }

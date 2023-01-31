@@ -43,6 +43,7 @@
 		05E658DA29754E66005B8E3E /* WhatYouCanDoWithThe1Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E658D929754E66005B8E3E /* WhatYouCanDoWithThe1Row.swift */; };
 		05E658DC297554CF005B8E3E /* WhatYouCanDoWithThe1Row_NonDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E658DB297554CF005B8E3E /* WhatYouCanDoWithThe1Row_NonDivider.swift */; };
 		05F4C07B2988B9B300138F91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05F4C07D2988B9B300138F91 /* Localizable.strings */; };
+		05F4C0802988C34300138F91 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F4C07F2988C34300138F91 /* LanguageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		05E658DB297554CF005B8E3E /* WhatYouCanDoWithThe1Row_NonDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatYouCanDoWithThe1Row_NonDivider.swift; sourceTree = "<group>"; };
 		05F4C07C2988B9B300138F91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		05F4C07E2988B9B900138F91 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		05F4C07F2988C34300138F91 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				05B70FF92976673800380F37 /* CircleIndicatorView_NonLine.swift */,
 				05B70FFB297667BD00380F37 /* CircleIndicatorRow_NonLine.swift */,
 				05B70FFD2976786300380F37 /* FAQsRow.swift */,
+				05F4C07F2988C34300138F91 /* LanguageManager.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				05E658D4297534D1005B8E3E /* TermViewsAndConditions.swift in Sources */,
 				05E658D629754737005B8E3E /* TypeOfMembership.swift in Sources */,
 				05B70FEE29763B8D00380F37 /* CentralGroupView.swift in Sources */,
+				05F4C0802988C34300138F91 /* LanguageManager.swift in Sources */,
 				055B4AE2296D5B930018BFD6 /* TestView.swift in Sources */,
 				05B710002976791C00380F37 /* FAQs.swift in Sources */,
 				05E658DC297554CF005B8E3E /* WhatYouCanDoWithThe1Row_NonDivider.swift in Sources */,
