@@ -19,8 +19,6 @@ struct ListView: View {
                         ForEach(sectionItem.items) {
                             accountItem in
                             NavigationLink(destination: chooseDestination( accountItem.itemName)) {
-                                
-                                
                                 Label {
                                     Text(accountItem.itemName)
                                 } icon: {
