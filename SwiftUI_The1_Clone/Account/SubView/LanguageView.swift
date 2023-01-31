@@ -60,7 +60,7 @@ struct LanguageView: View {
             }
         }
         .environment(\.locale, .init(identifier: languageManager.identifer))
-        .environmentObject(languageManager)
+        .environmentObject(languageManager) 
     }
     
 }

@@ -10,7 +10,8 @@ import SwiftUI
 struct LanguageListRow: View {
     //    var listLanguage = ["English", "Vietnamese"]
     @Environment(\.colorScheme) var colorScheme
-    @StateObject var languageManager = LanguageManager()
+    @EnvironmentObject var languageManager: LanguageManager
+    @EnvironmentObject var darkModeManager: DarkModeManager
     var text: String
     var image: String
     //    @EnvironmentObject var languageManager: LanguageManager()

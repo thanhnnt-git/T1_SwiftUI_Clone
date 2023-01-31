@@ -10,22 +10,27 @@ import SwiftUI
 struct DarkModeView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) private var dismiss
+//    @State var myColorScheme: ColorScheme?
+    @StateObject var darkModeManager = DarkModeManager()
+    @State var imageName = "OffLight"
+    @State var imageName2 = "On"
     var body: some View {
-        List {
-            HStack(spacing: 290) {
-                Text("On")
-                Image("OffLight")
-            }
-            .listRowBackground(colorScheme == .dark ? Color(red: 37/255, green: 37/255, blue: 37/255) : Color(red: 229/255, green: 229/255, blue: 229/255))
-            .listRowSeparator(.hidden)
-            
-            HStack(spacing: 290) {
-                Text("Off")
-                Image("On")
-            }
-            .listRowBackground(colorScheme == .dark ? Color(red: 37/255, green: 37/255, blue: 37/255) : Color(red: 229/255, green: 229/255, blue: 229/255))
-            .listRowSeparator(.hidden)
-            
+        VStack(spacing: -5) {
+            DarkModeRow(text: "On", image: imageName)
+                .onTapGesture {
+                    darkModeManager.mode = .dark
+                    if imageName == "OffLight"{
+                        imageName = imageName == "OffLight" ? "On" : "OffLight"
+                        imageName2 = imageName == "OffLight" ? "On" : "OffLight"
+                    }
+                }
+            DarkModeRow(text: "Off", image: imageName2)
+                .onTapGesture {
+                    darkModeManager.mode = .light
+                    imageName = imageName == "OffLight" ? "On" : "OffLight"
+                    imageName2 = imageName == "OffLight" ? "On" : "OffLight"
+                }
+            Spacer()
         }
         
         .toolbar(.hidden, for: .tabBar)
@@ -38,7 +43,7 @@ struct DarkModeView: View {
                         dismiss()
                     } label: {
                         Image(systemName: "chevron.backward")
-                            .foregroundColor(colorScheme == .dark ? .white : .black)
+                            .foregroundColor(darkModeManager.mode == .dark ? .white : .black)
                     }
                     Spacer()
                     Text("Dark Mode")
@@ -49,7 +54,8 @@ struct DarkModeView: View {
                 
             }
         }
-       
+        .preferredColorScheme(darkModeManager.mode)
+        .environmentObject(darkModeManager)
     }
        
 }
